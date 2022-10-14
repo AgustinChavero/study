@@ -1,0 +1,6 @@
+Poder enviar un formulario
+    Debe contener nombre, mail, y materia
+        adeudada
+    Validar mails y nombres
+    Enviar al servidor de manera pulida
+    

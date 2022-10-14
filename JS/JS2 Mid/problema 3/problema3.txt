@@ -1,0 +1,5 @@
+Sitema de incripcion de notas
+    Interfaz para introducir notas
+    Validar que no haya errores
+    Promediar notas con trabajos
+        Si el promedio es mayor a 7: aprobar

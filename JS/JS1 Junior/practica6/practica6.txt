@@ -1,0 +1,6 @@
+Indicarle las 20 llaves posibles con 4 imagenes y cofla debe
+    seleccionar cual llave usar
+Una vez seleccionada enviar los datos al servidor y que otro 
+    programador se encargue
+
+ 

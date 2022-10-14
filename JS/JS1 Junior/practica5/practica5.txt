@@ -1,0 +1,11 @@
+Para aprobar se necesita al menos 90% de asistencias
+Promedio por materia de al menos 7 de 10
+Minimo de 75% de los trabajos practicos entregados
+-----------------------------------------------------
+Soliticar datos y decirle si aprueba o reprueba
+Mostrar todo esto con colores representativos en consola 
+-----------------------------------------------------
+Organizar diariamente las tareas
+Utilizar la consola para organizarlo
+Cada tarea no debe superar las 4hs
+  

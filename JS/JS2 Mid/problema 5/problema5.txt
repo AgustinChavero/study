@@ -1,0 +1,7 @@
+Buscar saber cuantas personas cursan el 
+    semestre con una appi
+    
+    Crear un sistema para obtener la info
+    Mostrar ordenadamente en un sitio web
+
+Hace falta un servidor*

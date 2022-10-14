@@ -1,0 +1,22 @@
+A) 3 chicos entran a una heladeria a comprar helado pero los precios no estan en cada estante respectivo.
+
+Roberto tiene $1.5 usd
+Pedro tiene $1.7 usd
+Cofla tiene $3 usd
+
+Los precios de helados son lo siguientes:
+Palito de helado de agua: $0.6 usd
+Palito de helado de crema: $1 usd
+Bombon helado marca heladix: $1.6 usd
+Bombon helado marca heladovich: $1.7 usd
+Bombon helado marca heraldo: $1.8 usd
+Potecito de helado con confites: $2.9 usd
+Pote de 1/4 kg: $2.9 usd
+
+Crear soluciones 
+
+	-Pedirles que ingresen el monto que tienen y mostrarles el helado mas caro
+	-Si hay 2 o mas con el mismo precio, mostrar ambos.
+	-Cofla quiere saber cuanto es el vuelto
+
+Solo se puede hacer con variables y condicional IF

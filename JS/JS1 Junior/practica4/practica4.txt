@@ -1,0 +1,10 @@
+Crear una calculadora que calcule potencias, raices cuadradas y cubicas
+    ademas de lo basico como sumar, restar, dividir y multiplicar
+Crear funcion que al pasar como parametro la materia no devuelva:
+    Profesor asignado
+    Nombre de los alumnos
+Tambien crear una funcion que nos indique en cuantas clases esta cofla
+    Nombre de esas clases y sus profesores
+Crear una funcion para preguntar en que materia quieren inscribirse
+    Si ya hay 20 inscriptos, negar la inscripcion
+    Si hay menos, habilitarlo

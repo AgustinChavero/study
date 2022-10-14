@@ -1,0 +1,43 @@
+body {
+    font-family: sans-serif;
+
+    color: #333;
+}
+input {
+    width: 90%;
+
+    padding: 6px;
+    margin: 9px 5%;
+    display: block;
+
+    border: none;
+    outline: none !important;
+
+    transition: background 0.7s;
+}
+input:hover {
+    background-color:bisque;
+}
+input[type="submit"] {
+    width: 50%;
+
+    padding: 12px;
+    margin: auto;
+}
+form {
+    width: 86%;
+    margin: auto;
+}
+h2 {
+    text-align: center;
+}
+.green {
+    color: green;
+    background-color: darksalmon;
+    font-size: large;
+}
+.red {
+    color: red;
+    background-color: darksalmon;
+    font-size: large;
+}

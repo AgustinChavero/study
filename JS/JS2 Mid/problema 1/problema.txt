@@ -1,0 +1,7 @@
+Pantalla debe ser al menos full HD
+Preguntar si esta seguro al momento de
+    realizar la compra
+
+Mostrar suficientes datos para conocer
+    el sitio web desde adentro de la 
+    pagina web

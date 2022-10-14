@@ -1,0 +1,4 @@
+Crear interfaz agradable y atractiva
+Contener datos de manera estructurada
+Poder elegir cuando rinde
+Deben actualizar y reemplazar

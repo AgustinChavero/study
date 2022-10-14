@@ -1,0 +1,13 @@
+Mostrar 3 celulares y sus propiedades
+Cada uno debe tener color, peso, resolucion de pantalla
+    camara y memoria RAM
+Deben poder prender, reiniciar, tomar fotos y grabar
+
+Implementar todas estas cualidades en celulares de alta
+    gama. Graban en camara lenta, tienen reconocimiento facial
+    y una camara extra.
+
+
+Crear un sistema para decidir que app descargarse 
+Debe contenes la cantidad de descargas, puntuacion y peso
+Se deben poder instalar, abrir, cerrar y desinstalar

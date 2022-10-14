@@ -1,0 +1,476 @@
+/*
+Adaptar a responsive con medidas relativas
+Varian segun como son establecidas
+Por ejemplo un 1em equivale a 16px
+    pero si tomo la caja y determino que su font-size equivale
+    a cierto valor, entonces ese 1em respondera al valor que 
+    hemos determinado dentro de la caja dando ese valor a los 
+    elementos internos
+
+Viewportwidth:
+    Equivale a la medida total de la pantalla 
+        por ejemplo al marcar width: 100vw; estamos marcando
+        el total de la pantalla sea cual sea
+    O manejarse de manera porcentual tambien es valido
+*/
+
+                /*Propiedades de font*/ 
+div {
+    font-size: 2em;             /*Tamaño de letra*/
+    font-family: Georgia;       /*Tipografia de letra*/
+    line-height: 1;             /*Alto de letra*/
+    font-weight: normal;        /*Ancho de letra*/
+    font-stretch: normal;       /*Teoricamente inutil*/
+    font-variant: small-caps;   /*Teoricamente inutil*/
+    /*Consultar Google Font para tipografias*/
+    font-family: Georgia, sans-serif; /*Si no encuentra una
+    tipografia seguira buscando en la siguiente*/
+}
+
+/*Para utilizar un normalize, lo buscamos en internet y aplicamos
+el archivo CSS al html correspondiente*/
+div{
+     box-sizing: border-box; /*Utilizado para definir un tamaño
+     fijo de una caja*/
+     padding: 0;
+     margin: 0;
+}
+div{
+    display: inline; /*Propiedad que permite cambiar el comportamiento
+    de las cajas, comportandose de un elemento en linea a un
+    elemento en caja*/
+    display: inline-block; /*Comporta como elemento en linea
+    pero puede adquirir propiedades de uno en bloque*/
+
+}
+div {
+    background-color: antiquewhite; /*Fondo*/
+    padding: 0px 0px; /*Distancia general entre texto y caja*/
+    padding: 0px 0px 0px 0px; /*1er Top 2do Right 3ro Bottom 4to left*/ 
+    padding-left: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-right: 0px;
+    box-sizing: content-box; /*Para que la caja se adapte
+    al tamaño del contenido*/
+    text-align: center; /*Propiedad de alineado*/
+    margin: 0px 0px 0px 0px; /*Igual que padding, pero define
+    el espacio entre las diferentes cajas*/
+    border-radius: 10%; /*Que tanto queremos redondear una caja*/
+    border: 1px inset/outset/solid/groove/ridge color;/*Bordes*/
+    box-shadow: 10px 5px 5px 5px red; /*Sombra de caja*/
+    text-shadow: 2px 2px 5px; /*Sombra de texto*/
+    transform: rotate(90deg); /*Rotacion, a la izquierda tiene
+    que ser negativo el num a la derecha tiene que ser positivo*/
+}
+ /*Si vamos a aplicar un mismo codigo a diferentes cajas, 
+    lo realizamos invocando ambas cajas para ponerle el mismo
+    propiedad y valor, es decir ".caja1, .caja2 {propiedad: valor}"*/
+div {
+    outline: 10px solid blue; /*Mismo efecto que border pero
+    sin movernos la caja de abajo. Enmarca elementos*/
+    margin: auto; /*De esta manera centramos elementos bloques*/
+    position: relative; /*Reduciria el tamaño de una caja si
+    tiene otra caja superpuesta*/
+     /*Border ocupa un lugar real en la caja mientras que outline
+     no lo hace*/
+    display: inline-block; /*Acomoda las cajas en linea*/
+    display: block; /*Habilita para cambiar resoluciones*/
+    display: inline-block; /*Las pone en linea*/
+}
+ /*Position: orden por el cual ponemos todos los elementos
+    Al posicionarlo hacemos que adquiera top, right, bottom y
+    left al aplicar el position*/
+div {
+    position: static;  /*Valor por defecto*/
+    position: relative; /**/
+    /*Las propiedades Top y Left son las mas importantes y 
+     estaran por sobre Bottom y Right en importancia*/
+    z-index: 10; /*No recomendable usar, hara que se sobrepongan
+    elementos entre ellos*/
+    /*Padre hijo se le llama a las cajas que estan dentro de 
+    otras cajas, siendo el primero el padre y el segundo el hijo
+    El hijo nunca se suporpondra al padre pero con un 
+    z-index: -1 si lo hara siempre que el padre no posea uno*/
+}
+div {
+    opacity: .5;  /*Transparencia, siendo mayor es mas visible
+    siendo menor es mas transparente*/
+}
+div {    /*De esta manera ocuparan las esquinas de la caja padre*/
+    position: relative;
+     /*Sus hijos*/
+         right: 0; bottom: 0; /*Caja 1*/
+         right: 0; /*Caja 2*/
+         top: 0; /*Caja 3*/
+         bottom: 0; /*Caja 4*/
+         top: 0; left: 0; right: 0; bottom: 0; margin: auto;
+             /*Caja 5 estaria centrada justo en el medio*/
+}
+div {
+    overflow: auto; /*Detecta si el contenido sobrepasa la caja
+    y nos deja scrollear dentro de la misma*/
+    overflow: scroll; /*Obliga a que alla si o si sin importar
+    si es necesario, un scroll*/
+    overflow-y: auto; /*Hace referencia a un scroll vertical*/
+    overflow-x: auto; /*Hace referencia a un scroll horizontal*/
+    overflow: hidden; /*Ocultara la barra para scrollear*/
+}
+div:hover > img {
+    transition: all 2s; /*Genera un efecto de transicion al 
+    pasar el mouse por encima*/
+}
+div {
+    float: right; /*Hara flotar la caja a la derecha*/
+    float: left; /*Hara flotar la caja a la izquierda*/
+}
+div {
+     /*Si dentro de este contenedor hay una imagen y texto
+     juntos, para hacer que el texto rodee a la imagen debemos
+     otorgarle el 50% de width a cada uno y poner primero la 
+     imagen*/
+     /*.img*/
+    float: right; /*O left, da igual*/
+    width: 50%;
+    padding: 20px;
+     /*texto dentro de la caja sin estar dentra de OTRA caja (p)*/
+     width: 50%;
+     margin: 1%;
+    
+}
+div {  /*Previo al hover*/
+    background: darkolivegreen;
+}
+div:hover {
+    background: darkcyan;
+    color: blue;
+    transition: all 2s;  /*De esta manera se aplica a todo*/
+    transition: background 0.5s;  /*No se porque mal aplicado*/
+     /*De esta manera generamos una transision hasta el 
+     fondo de la caja, lo mismo se puede aplicar a las letras
+     o lo que sea siempre que este previamente definido*/
+     /*Mediante background 0,5s; p 0,2s; y asi*/
+
+    /*Estas son pseudo clases, no son clases pero pertenecen
+     a las mismas*/
+    /*  :line
+        :visited    Cuando este visitado tendra un efecto
+        :active     Cuando lo presiones tendra un efecto
+        :focus      Cuando lo selecciones tendra un efecto
+        :lang       Aplicara el efecto bajo una condicion, el idioma*/
+        /*!!Ejemplos abajo*/
+    /*Hover aplicarar un efecto cuando se pase el mouse por
+    encima*/
+}
+a:link {  /*Dara este efecto a los links*/
+    color: red;
+}
+a:visited {  /*Dara este efecto a los visitados*/
+    color: violet
+}
+a:active {  /*Dara este a lo que presiones*/
+    width: 600px;
+    /*Transicion siempre definida previamente*/
+}
+div b:lang(es) {
+    background-color: aliceblue;
+    padding: 0%;
+    /*Aplicara el efecto si en el HTML hay un elemento con la
+    subclass lang="es" */
+}
+
+
+div::placeholder {
+    color: red;
+     /*Pseudo elementos*/
+     /*Como tantos otros cuando queremos modificar un elemento
+     dentro de la caja, por ejempo placeholder que hace ref
+     a el texto dentro de un input, los citamos de esta
+     manera*/
+      /*first-line
+        first-letter
+        placeholder
+        selection
+        after
+        before*/
+     /*Ejemplo del before, no puede ser seleccionado por el mouse*/
+    /*b::before {
+        contente: "linea de texto no seleccionable"
+        color: color;
+        font-size: tipo; ETC
+    }*/
+}
+ /*Object Fit*/  /*Modificara las imagenes mediante sus
+ propiedades contain, cover, none, scale-down */
+img {
+    object-fit: cover;  /*La imagen se ajustara al contenedor*/
+}
+                /*Responsive Design - Mobile First*/
+  /*Se refiere a que primero hay que diseñar una pagina web para
+  celular y luego adaptarla a PC porque Google recomiendo en 
+  primera instancia las paginas que estan realizadas de esta
+  manera*/
+ /*     @media only screen and(max-width: 800px) {
+        display: block;
+        width: 100%; */
+ /*Aca le estamos diciendo que cuando alcance una medida menor
+ a determinada cantidad de pixeles realice otros efectos*/
+ /*Buscar si es asi o se cambio con el paso de los años*/
+  /*Agregar el meta viewport al principio del html para que
+  todos los cambios sean resposive*/ /*Esto se agrega
+  solo al momento de seleccionar html5 al crear un html*/
+
+@media (max-width: 500px) { /*Parece que paso a ser escrito asi*/
+    
+}
+ /*Me salto lo de Menu Responsive, se practica al final de todo*/
+
+
+
+
+
+
+
+                /*Flexbox*/
+/*Los elementos dentro de una caja con la propiedad flex son
+elementos flex*/
+.flex-container {
+    display: flex;
+}
+.fle-items {
+    background-color: #248;
+    color: #fff;
+}
+/*Dentro de una caja flex si yo coloco dicha propiedad los elementos
+internos se acomodaran adaptandose y dependiendo de su contenido
+estaran en fila uno al lado del otro*/
+/*Priorizara la simetricidad de los elementos y adapta el contenido
+interno para que tengan el mismo tamaño*/
+/*Main axis y cross axis*/
+    /*Se refiere al comienzo y el final en cada direccion
+    cross start sera arriba y cross end dara final abajo
+    main start y main end siguen la logica de escritura de 
+    izquierda a derecha*/
+    /*Si una se invierte se invierta la otra
+    si el comienzo de cross pasa a ser abajo y el final arriba
+    main tendra su comienzo en derecha y final en izquiera, y 
+    viceversa*/
+
+
+/*Flex direction nos permite cambiar esto*/
+.contenedor {
+    flex-direction: row; /*Main automatico de izquierda a derecha*/
+    flex-direction: column; /*Corre en el cross de arriba a abajo*/
+    flex-direction: column-reverse; /*Corres el cross al reves*/
+    flex-direction: row-reverse; /*Corre el main al reves*/
+}
+/*Para hacerlo responsive y se vayan pasando para abajo
+al bajar la resolucion, de derecha a izquierda o en el orden en
+el que este se aplica lo consecuente*/
+.contenedor {
+    display: flex;
+    flex-wrap: wrap; /*Esto*/
+    flex-wrap: wrap-reverse; /*Lo mismo pero al reves*/
+}
+/*Justify*/ /*Centrara las cajas, no el contenido*/
+.contenedor {
+    justify-content: space-around; /*Equivalente al margin auto*/
+    justify-content: space-evenly; /*Cada uno tendra el mismo margen*/
+}
+/*Align-items*/ /*Utilizada solo para cuando hay una linea de 
+    flex items*/
+.contenedor {
+    align-items: flex-start; /*Los centra al principio*/
+    align-items: center; /*Centra las cajas en el contenedor*/
+    align-items: flex-end; /*Los coloca al final*/
+    align-items: stretch; /*Si posee un height antes se estirara
+    a lo largo de toda la caja*/ /*Valor por defecto*/
+    align-items: baseline; /*Se iran las cajas para arriba
+    Previamente con flex-wrap: wrap-reverse*/
+}
+/*Align-content*/ /*Para cuando hay mas de una linea*/
+.contenedor {
+    align-content: flex-start; /*Mismo valores*/
+}
+
+            /*Grid*/        /*Grillas*/
+/*Grid container se refiere a todo el contenedor*/
+/*Grid item se refiere a lo que se ubica dentro de las seldas
+    es decir son los hijos directos*/
+/*Grid ceil son cada una de las celdas sin importar su forma*/
+/*Grid tracks se refiere a filas y columnas que hay dentro*/
+/*Grid area se refiere a areas de ceils pero sin cruzarse*/
+.body {
+    background: radial-gradient(circle,#fff,#bbb);
+    /*De esta manera tenemos un BG como si fuera, una hoja sucia (?*/
+}
+.grid-container { /*Contenedor de sea cual sea los elementos*/
+    display: grid;
+    grid-template-rows: 100px 100px 100px; /*De esta manera
+    determinamos cuantos ceil habra y su ancho*/ /**/
+    grid-template-columns: 100px 100px 1fr; /*Hacemos que quede
+    de forma cuadriculada*/ /*Con el 1fr es como un flex row que
+    le da todo lo que queda de espacio a la ultima columna*/
+    grid-template-rows: repeat(3, 100px); /*Hace lo mismo que
+    el primero ahorrando codigo*/
+    grid-auto-columns: 100px; /*Rellena las columnas
+     creados
+    manualmente y los automaticamente creados*/
+    grid-auto-flow: column; /**/
+    grid-auto-flow: row; /**/
+    grid-auto-flow: dense; /*Rellena los campos vacios*/
+}
+.grid-item:first-child {    /*Recordemos que se refiere a cualquier elemento
+    dentro de el container*/
+    background: #248;
+    grid-column: 1 / 3; /*La primer columna se expandera y empujara
+    a las demas columnas*/ /*grid-row: 1/2 mismo efecto*/
+    /*Si indicamos que se expanda a un columna que no existe aun
+    creara unas nuevas*/ /*utilizar dense*/
+}
+.grid-item:nth-child(2) { /*Colocar second child y asi es una 
+    mala practica es mejor hacerlo asi por si hay miles*/
+    background-color: #248;
+}
+
+/*ME SALTE LO QUE QUEDABA DE GRID, ES UNA PAJA, Y ME SALTE LA PRACTICA DE GALERIA
+LO DEJO PARA EL FINAL*/
+
+
+
+
+/*Responsive Design*/
+/*En el HTML debera ir escrito lo siguiente
+<link rel="stylesheet" media="(min-width: 500px) href="link.css"*/
+.div-responsive {
+    background-color: red;
+}
+@media (min-width: 500px) { /*Esto seria Mobile First*/
+     .div-responsive {
+         background-color: #248;
+     }
+}
+/*No encuentro la forma de aplicar AND y OR en la actualidad
+    por lo tanto tenemos que repetir el proceso anterior en cada
+    resolucion*/
+/*Quizas es la siguiente*/
+@media (min-width:600px) and (max-width:800px) {
+    .div-responsive {
+        background-color: #248;
+    }
+    .cosas {
+        background-color: #bbb;
+        /*Se pueden citar lo que sea, es un un nuevo css dentro
+        del mismo css en el que estamos parados*/
+    }
+} /*And*/ /*Si encaja en los parametros de minimo y maximo ejecutara
+el codigo sino no, ambas condiciones deben estar cumplidas*/
+@media (max-width:600px), (min-width:800px) {
+
+} /*Or*/ /*No lo explicó*/
+@media not all and (max-width: 600px) {} /*Not*/ /*No lo explicó*/
+
+/*Me salto el diseño de la pagina web Responsive, la practica al ultimo*/
+
+
+
+
+
+
+                    /*Transition*/ 
+/*Ir mostrando el progreso de un cambio*/
+.contenedor:hover {
+    transition-property: left, color; /*Indicamos de a uno donde
+    queremos hacer los cambios, nunca poner all para optimizar 
+    recursos*/ /*No me deja colocar background que es lo que va*/
+    transition-duration: 1s; /*Determina el tiempo de la 
+    transicion*/
+    transition-delay: 2s; /*Mostrara el cambio despues de cierto 
+    tiempo*/
+    transition-timing-function: linear; /*Aceleracion y Desaceleracion
+    aplicadas en el cambio de los elementos*/
+    /*Linear va siempre a la misma velocidad*/
+    transition-timing-function: ease; /*Acelera y desacelera*/
+    transition-timing-function: ease-in; /*Progresivo*/
+    transition-timing-function: ease-out; /*Igual a ease pero mas 
+    leve*/
+    transition-timing-function: ease-in-out; /*Progresivo para
+    acelerar y para desacelerar, el punto de velocidad esta en el 
+    medio*/
+    transition: 20s; /**/
+}   
+                    /*Animaciones*/
+/**/
+/**/
+@keyframes nombreParaIdentificar { /*No se si es la forma correcta*/
+    from {
+        position: relative;
+        left: 0;
+    }
+    to {
+        left: 80%;
+    }
+}
+/*Quizas esta sea la forma nueva*/ /*No se como funciona*/
+@keyframes identificador {
+    0% { top: 0; left: 0; }
+    30% { top: 50px; }
+    68%, 72% { left: 50px; }
+    100% { top: 100px; left: 100%; }
+}
+.contenedor { /*De esta manera lo aplicamos*/
+    position: relative;
+    animation-name: nombreParaIdentificar; 
+    animation-duration: 1s; /*Variable de timing-function*/
+    animation-timing-function: ease; /*Igual que en transition*/
+    animation-iteration-count: 900; /*Cantidad de veces que
+    queremos que se repita*/
+    animation-direction: alternate-reverse; /*De esta manera lo
+    hara ida y vuelta*/
+    animation-fill-mode: forwards; /*Both junto con forwards son
+    los mas utilizados*/ /*None, Backwards*/ 
+    /*Define como terminara*/
+    animation-delay: 1s; /*Define cuando tardara en iniciar*/
+}
+
+                    /*Transform*/
+/*Transforma el elemento o la caja en diferentes formas*/
+.caja {
+    transition: transform 1s;
+    transform: translate(50px);
+}
+.contenedor:hover {
+    transform: translate(50px); /*No hace falta explicar mucho
+    Lo mueve y listo, dependiendo el eje que coloquemos en Translate*/
+    transform: translateX(); 
+    transform: translateY();
+    transform: scale(1.8) translate(50px); /*Modifica su tamaño
+    y lo expande*/
+    transform: scale(10); /*Agranda su tamaño*/
+    transform: skew(30deg); /*Lo deforma*/
+    /*DEG Divide en grados*/
+
+                        /*Clip Path Generator*/
+    /*Con esto podemos copiar la forma que queramos que tenga el 
+    elemento y pegarlo en nuestro .css, googlear*/
+                        /*Box Shadow*/
+    /*Lo mismo que el anterior, googlear*/
+    /*Googlear CSS transform property // w3schools.com*/
+    /*Teoricamente hay generadores de todo*/
+}
+
+/*Background*/
+
+body {
+    background-image: url(link);
+    background-size: cover; /*Hara que ocupe el 100% de la caja*/
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-origin: content-box;
+    background-attachment: fixed; /*De esta manera quedara fija
+    la imagen sin importar cuanto scroliemos*/
+}
+
+/*Variables*/
+
+

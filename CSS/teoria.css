@@ -1,0 +1,76 @@
+/*
+PARTE TEORICA DE CITACION, ESPECIFICIDAD, METODOLOGIA BEM
+
+                CITACION
+
+selector {
+    propiedad: valor;
+}
+* {propiedad: valor;
+    selecciona a todos los elementos}
+.class {propiedad: valor;
+    selecciona por clase "class="clase""
+    que hemos puesto sea solo una o mas}
+#id {propieada: valor;              (esta debe ser la primordial)
+    selecciona por id "id="id""
+    se utiliza solamente para un elemento}
+[atributo="definicion"] {propieadad: valor;
+    selecciona por atributo colocado dentro del selector en
+    html asi como se ve entre corchetes}
+selector selectorInterno o clase interna {propiedad: valor;
+    por ejemeplo "h2 p" y selecciona solo los p dentro de 
+    los h2}
+.selector-clase selector selector {propieadad: valor;
+    se estara seleccionando "h2 class="clase" b span"}
+selector:hover {propiedad: valor
+    se ejecuta el valor cuando le pasamos el mouse encima
+    se puede agregar en cualquier momentos el :hover}
+
+                ESPECIFICIDAD
+
+Siempre se tomarara el ulitmo css añadido por mas que sean miles
+    aplicados al mismo selector
+
+En orden decrecientes la citacion tiene la siguiente jerarquia
+
+    !important => estilos en linea => id =>
+    => clases, pseudo clases y atributos =>
+    => elementos y pseudo elementos
+
+ *Important se refiere a cuando agregamos !important al final
+    de cualquier atribucion de datos {propiedad: valor !important}
+ *Estilos en linea se refierer al css escrito en html (style="")
+ *Clases se refiere a class o pseudo clases a 
+ *Elementos se refiere a los selectores
+
+Cuando seleccionamos dos veces al mismo elemento en la 
+    misma jerarquia establecida cambiara por
+    cascada es decir orden de code y selecciona el ultimo
+Cuando escribimos consecuentemente sobre el mismo elemento
+    pero con un orden de jerarquia mayor, no importa el orden
+    de cascadad o cual fue primero o segundo o lo que sigamos 
+    escribiendo, se ejecuta el code de mayor jerarquia
+
+            METODOLOGIA BEM
+
+Se refiere al modo de escritura de codigo, debtro de html
+    definiendo las clases las vamos a escribir segun su 
+    jerarquia escrita de la siguiente manera
+    <div clase="nombre-variable">
+        <elemento class="nombre-variable__elemento">
+    Para citarlo .contact-form__elemento
+    Si hay muchos del mismo estilo 
+        <elemento class="nombre-variable__elemento">
+        <elemento class="nombre-variable__elemento">
+        <elemento class="nombre-variable__elemento">
+    Se cita .nombre-variable__elemento: first-child y asi
+    de consecuentemente o sino marcar uno especial asi:
+        <elemento class="nombre-variable__elemento--nombre">
+        .nombre-variable__elemento--nombre{} o sino
+        <elemento class="nombre-variable__elem-subElem">
+        .nombre-variable__elem-subElem{}
+    *elem-subElem se refiere al elemento dentro del elemento como
+    por ejemplo <p class=""> debajo <h2 class="">
+     se cita o escribe p-h2 (elem-subElem)
+*/
+

@@ -1,0 +1,37 @@
+POST http://localhost:3000/courses/programation/ HTTP/1.1
+Content-Type: application/json
+
+{
+    "id": 4,
+    "tittle": "Learn HTML",
+    "lenguage": "HTML",
+    "views": 4000,
+    "level": "basic"
+}
+
+###
+
+PUT http://localhost:3000/courses/programation/2
+Content-Type: application/json
+
+{
+    "id": 2,
+    "tittle": "Learn Python",
+    "lenguage": "Python",
+    "views": 5000,
+    "level": "easy"
+}
+ 
+###
+
+PATCH http://localhost:3000/courses/programation/3
+Content-Type: application/json
+
+{
+    "views": 15000,
+    "level": "hard"
+}
+
+###
+
+DELETE http://localhost:3000/courses/programation/1
